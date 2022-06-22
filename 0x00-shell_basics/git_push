@@ -1,8 +1,16 @@
 #!/bin/bash
-echo "Which file to chmod?"
-read file_name
-chmod u+x $file_name
+echo "wanna chmod?"
+read answer
+yes ="y"
+if [ "$answer" = "$yes" ]; then
+	echo "Which file to chmod?"
+	read file_name
+	chmod u+x $file_name
+	echo "DONE:${file_name} is executable."
+fi
+git status
 echo "what is your commig message?"
+sleep 50
 read Message
 git add .
 git commit -m "${Message}"
