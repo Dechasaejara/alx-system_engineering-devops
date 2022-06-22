@@ -1,19 +1,22 @@
 #!/bin/bash
+ 
 echo "wanna chmod?"
 read answer
-yes ="y"
+yes="y"
+
 if [ "$answer" = "$yes" ]; then
-	echo "Which file to chmod?"
-	read file_name
-	chmod u+x $file_name
-	echo "DONE:${file_name} is executable."
+    echo "which file to chmod?"
+    read file_name
+    chmod u+x $file_name
+    echo "Done: ${file_name} is excutable."
 fi
 git status
-echo "what is your commig message?"
+echo "What is your git Message?"
 sleep 50
 read Message
-git add .
-git commit -m "${Message}"
+git add . 
+git  commit -m "${Message}"
 git push origin master
-echo "DONE: git push ${Message} commit."
+echo "DONE: git pushed ${Message} commit."
 git status
+
