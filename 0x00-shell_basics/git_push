@@ -1,22 +1,22 @@
 #!/bin/bash
  
-echo "wanna chmod?"
-read answer
-yes="y"
+# echo "wanna chmod?"
+# read answer
+# yes="y"
 
-if [ "$answer" = "$yes" ]; then
-    echo "which file to chmod?"
-    read file_name
-    chmod u+x $file_name
-    echo "Done: ${file_name} is excutable."
-fi
-git status
-echo "What is your git Message?"
-sleep 50
-read Message
-git add . 
-git  commit -m "${Message}"
-git push origin master
-echo "DONE: git pushed ${Message} commit."
-git status
+# if [ "$answer" = "$yes" ]; then
+#     echo "which file to chmod?"
+#     read file_name
+#     chmod u+x $file_name
+#     echo "Done: ${file_name} is excutable."
+# fi
+# git status
+# echo "What is your git Message?"
+# sleep 50
+# read Message
+# git add . 
+# git  commit -m "${Message}"
+# git push origin master
+# echo "DONE: git pushed ${Message} commit."
+# git status
 
